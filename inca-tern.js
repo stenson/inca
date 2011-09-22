@@ -9,7 +9,6 @@ function welcome(req, res) {
 
 function mustachio(req, res) {
   var jsons = {};
-
   fs.readdirSync(__dirname + "/json").forEach(function(file) {
     jsons[file.split(".")[0]] = JSON.parse(fs.readFileSync(__dirname+"/json/"+file, "utf-8"));
   });
