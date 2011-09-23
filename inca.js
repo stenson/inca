@@ -1,4 +1,5 @@
 var express = require("express");
+var colors = require("colors");
 var fs = require("fs");
 var exec = require("child_process").exec;
 
@@ -31,6 +32,11 @@ function run() {
 
   // & listen
   app.listen(port);
+
+  // report!
+  console.log("~~~ Welcome to Inca! ~~~".green);
+  console.log("~~~ The server is currently running at localhost:8083 ~~~".blue);
+  console.log("~~~ Ctrl-C to stop the server ~~~".red);
 }
 
 module.exports = {
