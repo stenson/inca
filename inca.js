@@ -1,7 +1,6 @@
 var express = require("express");
-var colors = require("colors");
 var fs = require("fs");
-var exec = require("child_process").exec
+var exec = require("child_process").exec;
 
 function welcome(req, res) {
   res.render("index");

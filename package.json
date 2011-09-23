@@ -14,6 +14,6 @@
     "stache": ">= 0.0.2"
   },
   "bin": {
-    "ender-wallet": "./bin/inca"
+    "inca": "./bin/inca"
   }
 }
