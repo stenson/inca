@@ -16,20 +16,26 @@ function mustachio(req, res) {
   res.render(req.params.page, { locals: jsons });
 }
 
-var app = express.createServer();
-var port = 8083;
+function run() {
+  var app = express.createServer();
+  var port = 8083;
 
-// stop
-app.set("view engine", "mustache");
-app.set("views", __dirname + "/mustaches");
-app.register(".mustache", require("stache"));
-app.use(express.static(__dirname + "/public"));
+  // stop
+  app.set("view engine", "mustache");
+  app.set("views", __dirname + "/mustaches");
+  app.register(".mustache", require("stache"));
+  app.use(express.static(__dirname + "/public"));
 
-// look
-app.get("/", welcome);
-app.get("/:page", mustachio);
+  // look
+  app.get("/", welcome);
+  app.get("/:page", mustachio);
 
-// & listen
-app.listen(port);
+  // & listen
+  app.listen(port);
+}
 
-exec("open http://localhost:8083");
+module.exports = {
+  exec: function(cmd) {
+    run();
+  }
+};

@@ -1,0 +1,19 @@
+{
+  "name": "inca",
+  "description": "easy mix of mustaches and jsons",
+  "version": "0.0.1",
+  "authors": ["Rob Stenson <@blickwickle>"],
+  "keywords": ["design", "mustache"],
+  "main": "./inca.js",
+  "homepage": "https://github.com/stenson/inca",
+  "engines": {
+    "node": ">= 0.4.1"
+  },
+  "dependencies": {
+    "express": ">= 0.3.0",
+    "stache": ">= 0.0.2"
+  },
+  "bin": {
+    "ender-wallet": "./bin/inca"
+  }
+}
