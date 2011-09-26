@@ -1,19 +1,35 @@
 INCA
 =================
 
-Inca is a fantastically simple and straightfoward tool for developing web apps and sites with Mustache.
+Inca is a fantastically simple and straightforward tool for developing web apps and sites with Mustache.
 
 
 Usage
 -----
 
-To use Inca, you must have Node installed. When installed, clone or download the repo. In Terminal, start the server by typing:
+To use Inca, you must have Node and npm (the node package manager) installed. In Terminal, download and install inca with the command:
 
 ```
-node inca-tern.js
+sudo npm install inca -g
 ```
 
-And that will open the default file, `index.html` in your default browser. **Boom!**
+This will add the command `inca` to your terminal, so starting your server is as easy as `cd`-ing into your project and typing:
+
+```
+inca
+```
+
+Fresh.
+
+But let's pump the breaks here. In order for your site to work, you're going to need three directories.
+
+- `/jsons` -> all of your json files
+- `/mustaches` -> all of your mustache templates
+- `/public` -> everything else: js files, css files, images, etc.
+
+If you clone or download this repo, you'll see exactly what we're talking about. In fact, you can just go ahead and download this repo. Then, once you've cd'd into the project, simply type `inca`.
+
+That will start the server, and when you hit `http://locahost:8083` in your favorite browser, inca will display your `index.mustache` file, by default. **Boom!**
 
 
 Versioning
