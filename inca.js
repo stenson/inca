@@ -1,7 +1,6 @@
 var express = require("express");
 var colors = require("colors");
 var fs = require("fs");
-var exec = require("child_process").exec;
 
 function welcome(req, res) {
   res.render("index");
@@ -9,8 +8,8 @@ function welcome(req, res) {
 
 function mustachio(req, res) {
   var jsons = {};
-  fs.readdirSync(__dirname + "/json").forEach(function(file) {
-    jsons[file.split(".")[0]] = JSON.parse(fs.readFileSync(__dirname+"/json/"+file, "utf-8"));
+  fs.readdirSync("json").forEach(function(file) {
+    jsons[file.split(".")[0]] = JSON.parse(fs.readFileSync("json/"+file, "utf-8"));
   });
 
   res.render(req.params.page, { locals: jsons });
@@ -22,9 +21,9 @@ function run() {
 
   // stop
   app.set("view engine", "mustache");
-  app.set("views", __dirname + "/mustaches");
+  app.set("views", "mustaches");
   app.register(".mustache", require("stache"));
-  app.use(express.static(__dirname + "/public"));
+  app.use(express.static("public"));
 
   // look
   app.get("/", welcome);
