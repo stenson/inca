@@ -12,7 +12,7 @@
   "dependencies": {
     "express": ">= 0.3.0",
     "colors": ">= 0.3.0",
-    "stache": ">= 0.0.2"
+    "mustache": ">= 0.2.3"
   },
   "bin": {
     "inca": "./bin/inca"

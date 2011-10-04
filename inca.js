@@ -22,7 +22,7 @@ function run() {
   // stop
   app.set("view engine", "mustache");
   app.set("views", "mustaches");
-  app.register(".mustache", require("stache"));
+  app.register(".mustache", require("./tern"));
   app.use(express.static("public"));
 
   // look

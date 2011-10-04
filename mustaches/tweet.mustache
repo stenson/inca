@@ -1,10 +1,4 @@
 <h5>TWEET</h5>
 
-{{#stream_tweet_mdo}}
-  {{#attributes}}
-    {{#user}}
-      <h3>{{screen_name}}</h3>
-    {{/user}}
-    {{>tweet_text}}
-  {{/attributes}}
-{{/stream_tweet_mdo}}
+<h3>{{stream_tweet_mdo.attributes.user.screen_name}}</h3>
+{{>tweet_text}}
