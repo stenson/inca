@@ -2,7 +2,6 @@ var tern = {};
 var fs = require("fs");
 var path = require("path");
 var mustache = require("mustache");
-
 var variableRegex = /\{\{(#|\^|\/)?([^\{]+)\}\}/g;
 var partialWithSource = /\{\{(>[^:]+):([^\{]+)\}\}/g;
 var partialsRegex = new RegExp("{{([>-])([^\\/#\\^]+?)\\1?}}+", "g");
@@ -51,7 +50,6 @@ tern.compile = function (source, options) {
   return function (options) {
     if (options.body) options.yield = options.body;
     var template = rewrite(source);
-    console.log(template);
     return mustache.to_html(template, options, {});
   }
 };
