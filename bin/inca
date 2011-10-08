@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("../inca").exec(process.argv);
+require("../lib/inca").exec(process.argv);
