@@ -3,7 +3,7 @@ INCA
 
 Inca is a fantastically simple and straightforward tool for developing web apps and sites with Mustache.
 
-<img src="https://github.com/stenson/inca/raw/master/app/inca-tern.jpeg"/>
+<img src="https://github.com/stenson/inca/raw/master/lib/inca-tern.jpeg"/>
 
 Usage
 -----
