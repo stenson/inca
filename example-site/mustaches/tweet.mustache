@@ -1,4 +1,9 @@
 <h5>TWEET</h5>
 
 <h3>{{stream_tweet_mdo.attributes.user.screen_name}}</h3>
-{{>tweet_text}}
+{{>tweet_text:stream_tweet_mdo}}
+
+{{! not working at the moment, should not work}}
+{{#refactoring_tweet}}
+<h3>Fetched remote stuff: {{text}}</h3>
+{{/refactoring_tweet}}

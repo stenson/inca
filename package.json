@@ -12,7 +12,8 @@
   "dependencies": {
     "express": ">= 0.3.0",
     "colors": ">= 0.3.0",
-    "mustache": ">= 0.2.3"
+    "mustache": ">= 0.2.3",
+    "twitter-text": "= 1.4.3"
   },
   "bin": {
     "inca": "./bin/inca"
