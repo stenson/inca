@@ -1,7 +1,10 @@
 <h5>TWEET</h5>
 
 <h3>{{stream_tweet_mdo.attributes.user.screen_name}}</h3>
+
+<div style="padding:15px;border:1px solid #eee">
 {{>tweet_text:stream_tweet_mdo}}
+</div>
 
 {{! not working at the moment, should not work}}
 {{#refactoring_tweet}}
