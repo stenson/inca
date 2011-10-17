@@ -1,5 +1,11 @@
 <div class="hero-unit">
   <h1>Inca</h1>
   <p>Fantastically simple and straightfoward tool for developing web apps and sites with Mustache.</p>
-  <p>{{settings.dude}}</p>
+  {{#settings.dude}}
+    <h1>Dude</h1>
+  {{/settings.dude}}
+  {{^settings.dude}}
+    <h1>Not Dude</h1>
+  {{/settings.dude}}
+  <h2>{{backup.dude}}</h2>
 </div>
