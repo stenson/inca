@@ -1,1 +1,0 @@
-refactoring_tweet :: http://api.twitter.com/1/statuses/show.json?include_entities=true&contributor_details=true&id=122357107944198144
