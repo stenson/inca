@@ -1,12 +1,9 @@
-<h5>TWEET</h5>
+<h5>Two Tweets</h5>
 
-<h3>{{stream_tweet_mdo.attributes.user.screen_name}}</h3>
-
-<div style="padding:15px;border:1px solid #eee">
-{{>tweet_text:stream_tweet_mdo}}
+<div class="tweet" style="border:1px solid #eee">
+{{>tweet_text:random(stream_tweet)}}
 </div>
 
-{{! not working at the moment, should not work}}
-{{#refactoring_tweet}}
-<h3>Fetched remote stuff: {{text}}</h3>
-{{/refactoring_tweet}}
+<div class="tweet" style="border:1px solid #ccc">
+{{>tweet_text:random(stream_tweet)}}
+</div>
