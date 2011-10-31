@@ -35,6 +35,7 @@ It would look like this in HTML.
 ```
 
 And like this in Inca, so you'd split it up between two files. In the first file:
+
 ```
 <ul>
   {{>musician:linzay_young}}
