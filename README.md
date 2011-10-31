@@ -45,6 +45,7 @@ And like this in Inca, so you'd split it up between two files. In the first file
 ```
 
 You'll also need a partial, musician.mustache, that looks like this.
+
 ```
 <li>
   <strong>{{name}}</strong>
@@ -59,7 +60,7 @@ Also, you'll need some json files, like `linzay_young.json` & `chris_coole.json`
   {
     "name": "Linzay Young",
     "talent": "fiddler",
-    "location": "North Carolina"
+    "location": "Louisiana"
   }
 ```
 
@@ -105,6 +106,7 @@ That will start the server, and when you hit `http://locahost:8083` in your favo
 
 Extensions to Mustache Syntax
 -----------------------------
+*will soon have words*
 
 
 Versioning
