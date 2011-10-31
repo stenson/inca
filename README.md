@@ -1,13 +1,71 @@
 INCA
 =================
-
-Inca is a fantastically simple and straightforward tool for developing web apps and sites with Mustache.
+Inca is a simple tool for prototyping web apps & sites with Mustache.
 
 <img src="https://github.com/stenson/inca/raw/master/lib/inca-tern.jpeg"/>
 
+Briefly
+-------
+Inca is for prototyping websites, but it's more than just CSS & HTML. Not much more, just slightly more. What does that mean? Instead of writing HTML, Inca lets you write .mustache files full of variables. So, instead of writing your prototype data directly into your html, like `<li>Name of Test Dude 1</li><li>Name of Test Dude 2</li>`, Inca lets you write something like `{{#test_data}}<li>{{name_of_test_dude_1}}</li><li>{{name_of_test_dude_2}}</li>{{/test_data}}`
+
+Ok. That example was lame, admittedly. In fact, it makes Inca look pretty dumb, since you have to throw in all that extra surrounding stuff. Whatever. It's not about brevity, it's about POWER.
+
+Let's say you want to prototype a website that is a database of American old-time folk musicians, meaning you need to render a bunch of `li`'s, and each one has a ton of markup in it. The markup is repeated over and over again, just the variables are changing inside each of the `li`'s.
+
+It would look like this in HTML.
+
+```
+<ul>
+  <li>
+    <span>Linzay Young</span>
+    <small>Fiddler</small>
+    <strong>Louisiana</strong>
+  </li>
+  <li>
+    <span>Chris Coole</span>
+    <small>Banjoist</small>
+    <strong>Oregon</strong>
+  </li>
+  <li>
+    <span>Tommy Jarrell</span>
+    <small>Fiddler</small>
+    <strong>North Carolina</strong>
+  </li>
+</ul>
+```
+
+And like this in Inca, so you'd split it up between two files. In the first file:
+```
+<ul>
+  {{>musician:linzay_young}}
+  {{>musician:chris_coole}}
+  {{>musician:tommy_jarrell}}
+</ul>
+```
+
+You'll also need a partial, musician.mustache, that looks like this.
+```
+<li>
+  <strong>{{name}}</strong>
+  <small>{{talent}}</small>
+  <span>{{location}}</span>
+</li>
+```
+
+Also, you'll need some json files, like `linzay_young.json` & `chris_coole.json` & `tommy_jarrell.json`. For instance, here's `linzay_young.json`
+
+```
+  {
+    "name": "Linzay Young",
+    "talent": "fiddler",
+    "location": "North Carolina"
+  }
+```
+
+Huh, this is making Inca seem like *more* work than just prototyping in HTML. But you get the point.
+
 Usage
 -----
-
 To use Inca, you must have Node and npm (the node package manager) installed. In Terminal, download and install inca with the command:
 
 ```
@@ -43,6 +101,9 @@ Now you're ready to run the server, so just type `inca`, then visit `http://loca
 If you clone or download this repo, you'll see exactly what we're talking about. In fact, to see an example inca site, you can just go ahead and download this repo. Then, once you've `cd`'d into the inca project, type `cd example-site` and then `inca`.
 
 That will start the server, and when you hit `http://locahost:8083` in your favorite browser, inca will display your `index.mustache` file, by default. **Boom!**
+
+Extensions to Mustache Syntax
+-----------------------------
 
 
 Versioning
