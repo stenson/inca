@@ -1,7 +1,7 @@
 {
   "name": "inca",
   "description": "easy mix of mustaches and jsons",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "authors": ["Rob Stenson <@blickwickle>"],
   "keywords": ["design", "mustache"],
   "main": "./inca.js",
