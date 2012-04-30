@@ -1,7 +1,7 @@
 {
   "name": "inca",
   "description": "easy mix of mustaches and jsons",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "authors": ["Rob Stenson <@blickwickle>"],
   "keywords": ["design", "mustache"],
   "main": "./inca.js",
@@ -10,7 +10,7 @@
     "node": ">= 0.4.1"
   },
   "dependencies": {
-    "express": ">= 0.3.0",
+    "express": "< 3.0.0",
     "colors": ">= 0.3.0",
     "mustache": ">= 0.2.3",
     "twitter-text": "= 1.4.3"
