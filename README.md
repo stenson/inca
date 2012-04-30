@@ -104,6 +104,35 @@ If you clone or download this repo, you'll see exactly what we're talking about.
 
 That will start the server, and when you hit `http://locahost:8083` in your favorite browser, inca will display your `index.mustache` file, by default. **Boom!**
 
+
+Hosting Mode
+------------
+You can also run inca in hosting mode, so you can mount multiple inca projects at once, which is super-useful if you want to stage a bunch of projects, like: `http://localhost:8083/my-fresh-project-1/` and `http://localhost:8083/my-fresh-project-2/`.
+
+Just run `inca host` from the directory *above* your projects. If you have a `/shared` directory, static files in there will be available to all projects. Additionally, `/index.mustache` will be populated with the list of mounted projects when you hit `localhost:8083/`
+
+Example hosted directory structure:
+- `/my-fresh-project-1`
+- `/my-fresh-project-1/json`
+- `/my-fresh-project-1/mustache`
+- `/my-fresh-project-1/public`
+- `/my-fresh-project-2`
+- `/my-fresh-project-2/json`
+- `/my-fresh-project-2/mustache`
+- `/my-fresh-project-2/public`
+- `/shared` -> shared static files for all your projects
+- `/index.mustache` -> renders the list of mounted projects
+
+Example index.mustache:
+```
+{{#projects}}
+<ul>
+  <li><h1><a href="{{project}}/">{{project}}</a></h1></li>
+</ul>
+{{/projects}}
+```
+
+
 Extensions to Mustache Syntax
 -----------------------------
 *will soon have words*
