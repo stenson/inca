@@ -10,7 +10,7 @@
     "node": ">= 0.4.1"
   },
   "dependencies": {
-    "express": "< 3.0.0",
+    "express": "<= 2.9.1",
     "colors": ">= 0.3.0",
     "mustache": ">= 0.2.3",
     "twitter-text": "= 1.4.3"
